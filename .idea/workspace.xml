@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffa4a241-80db-425a-8354-292193e41679" name="Changes" comment="main finished, statistics started">
+    <list default="true" id="ffa4a241-80db-425a-8354-292193e41679" name="Changes" comment="added pivot table to statistics">
+      <change afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FlyaCorrelations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlyaCorrelations.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistics.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,15 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.statistics.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;copyright.filetypes.Python&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "Python.plot.executor": "Run",
+    "Python.statistics.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -95,12 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1737468351371</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added pivot table to statistics">
+      <option name="closed" value="true" />
+      <created>1737970132415</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737970132415</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started the work :)" />
     <MESSAGE value="main finished, statistics started" />
-    <option name="LAST_COMMIT_MESSAGE" value="main finished, statistics started" />
+    <MESSAGE value="added pivot table to statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="added pivot table to statistics" />
   </component>
 </project>
