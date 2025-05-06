@@ -1,7 +1,7 @@
 from functions import *
 
 # file path of the flya.txt file (no modification needed)
-input_file_path = "C:/Userdata_Laurin/Masterarbeit/p38_solidassignments_Laurin/FlyaCorrelations/flya_24.txt"
+input_file_path = "./flya.txt"
 
 
 # clean data file (remove unnecessary parts of the text file)
@@ -16,4 +16,4 @@ flya_list = read_file(cleaned_file)
 dictionary = group_list(flya_list)
 
 #save dictionary to .py file
-save_dictionary_to_file(dictionary, name=dictionary, file_name=result)
+save_dictionary_to_file(dictionary, name="dictionary", file_name="result")
