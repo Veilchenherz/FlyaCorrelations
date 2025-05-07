@@ -12,18 +12,51 @@ df = pd.read_csv("./atom_data_pivot.csv")
 # convert pandas dataframe to numpy array
 array = df.to_numpy()
 
+# fill gaps manually (the array only contains the amino acids that were considered by FLYA)
+list_array = array.tolist()
+
+def emptyLine (residue_number):
+    return [residue_number, 0, 0, 0, 0, 0]
+
+filled_list = []
+for i in range(11):
+    filled_list.append(emptyLine(i-3))
+
+for i in range(164):
+    filled_list.append(list_array[i])
+
+for i in range(16):
+    filled_list.append((emptyLine(i+172)))
+
+for i in range(165):
+    filled_list.append(list_array[i+164])
+
+for i in range(10):
+    filled_list.append((emptyLine(i + 353)))
+
+filled_array = np.array(filled_list)
+
 # create list of labels for the amino acid numbers (columns in the figure)
-row_labels = array[:,:1]
+row_labels = filled_array[:,:1]
 row_list = row_labels.tolist()
 row_list = [int(item[0]) for item in row_list]
 
 # list of labels for the atom types (rows in the figure)
-column_labels = ["C", "CA", "CB", "H", "N"]
+column_labels = ["H", "N", "CA", "CO", "CB"]
 
+array = filled_array
+
+# delete amino acid number from the array, since it is applied to the axes from the row_list
 array = np.delete(array, [0], 1)
 
 #swap columns and rows to put atom types on the y-axis and amino acid numbers on the x-axis
 array = np.transpose(array)
+
+new_order = [3, 4, 1, 0, 2]
+
+#rearrange array to match atom name labels
+array_reordered = array[new_order, :]
+array = array_reordered
 
 # split the array into lines that contain 60 amino acids each
 number_of_amino_acids = len(row_list)
@@ -71,7 +104,7 @@ for plot in plots:
 
     ax[plots.index(plot)].tick_params(axis='x', which='minor', length=0)
 
-# colorbar overlaps with main figure if turned on, so show it separately, cut it out and place it together however you like
+# colorbar overlaps with main figure if turned on, so show it separately, cut it out and place it together with the figure however you like
 #fig.colorbar(image, ax=ax, orientation='vertical', fraction=0.02, pad=0.01)
 
 fig.tight_layout()
